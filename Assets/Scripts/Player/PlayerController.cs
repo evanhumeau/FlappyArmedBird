@@ -24,7 +24,10 @@ public class PlayerController : MonoBehaviour, PlayerInputActions.IPlayerActions
 
     public void OnShoot(InputAction.CallbackContext ctx)
     {
-        throw new System.NotImplementedException();
+        if (ctx.started)
+            onShootStart?.Invoke();
+        else if (ctx.canceled)
+            onShootStop?.Invoke();
     }
 
 }

@@ -5,6 +5,8 @@ using UnityEngine.InputSystem.XR;
 
 public class PlayerHands : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject bullet;
 
     //Private
 
@@ -24,6 +26,7 @@ public class PlayerHands : MonoBehaviour
 
     private void OnShootStart()
     {
+        Instantiate(bullet, transform.position, transform.rotation);
         //Instantiate un bullet 
     }
 
