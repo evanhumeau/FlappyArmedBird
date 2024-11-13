@@ -29,10 +29,12 @@ public class PlayerMotor : MonoBehaviour
         _controller.onJumpStop += OnJumpStop;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        _direction.y = gravityForce * Time.deltaTime;
-        transform.position += _direction * Time.deltaTime;
+        //_direction.y = gravityForce * Time.deltaTime;
+        //transform.position += _direction * Time.deltaTime;
+
+        _rb.velocity += gravityForce * Vector3.up;
     }
 
     private void OnJumpStart()

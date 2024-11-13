@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PipeBehavior : MonoBehaviour
 {
+    [SerializeField]
+    private float PipeSpeed = 4f;
 
     //Private
 
@@ -20,6 +22,6 @@ public class PipeBehavior : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector3(transform.position.x - 4f * Time.deltaTime, transform.position.y, 0);
+        transform.position = new Vector3(transform.position.x - PipeSpeed * Time.deltaTime, transform.position.y, 0);
     }
 }

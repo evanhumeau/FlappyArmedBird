@@ -9,7 +9,7 @@ public class PipeSpawner : MonoBehaviour
 
     //Privates
 
-    private int _spawnInterval = 5;
+    private int _spawnInterval = 2;
 
   
     void Start()
