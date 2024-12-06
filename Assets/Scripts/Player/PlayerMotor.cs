@@ -18,6 +18,10 @@ public class PlayerMotor : MonoBehaviour
 
     private Vector3 _direction;
 
+    //Public 
+
+    public bool isJumping;
+
     private void Awake()
     {
         if (!TryGetComponent(out _rb))
@@ -40,6 +44,8 @@ public class PlayerMotor : MonoBehaviour
     private void OnJumpStart()
     {
         _rb.velocity = Vector3.up * jumpForce;
+
+        isJumping = true;
 
         //_rb.AddRelativeForce(0, jumpForce, 0, ForceMode.Impulse);
     }
