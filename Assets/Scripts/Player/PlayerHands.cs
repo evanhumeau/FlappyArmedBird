@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.XR;
+using UnityEngine.XR;
 
 public class PlayerHands : MonoBehaviour
 {
@@ -10,13 +11,14 @@ public class PlayerHands : MonoBehaviour
 
     //Private
 
-    private Rigidbody _rb;
     private PlayerController _controller;
+    private GameManager _gm;
+    private GameObject _gmObject;
 
     private void Awake()
     {
-        if (!TryGetComponent(out _rb))
-            Debug.LogError("Missing Rigidbody", this);
+        _gmObject = GameObject.Find("GameManager");
+        _gm = _gmObject.GetComponent<GameManager>();
         if (!TryGetComponent(out _controller))
             Debug.LogError("Missing PlayerController", this);
 
@@ -26,8 +28,12 @@ public class PlayerHands : MonoBehaviour
 
     private void OnShootStart()
     {
-        Instantiate(bullet, transform.position, transform.rotation);
-        //Instantiate un bullet 
+        if (_gm.isPaused == false)
+        {
+            Instantiate(bullet, transform.position, transform.rotation);
+            //Instantiate un bullet 
+        }
+
     }
 
     private void OnShootStop()

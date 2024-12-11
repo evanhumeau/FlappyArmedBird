@@ -50,7 +50,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a96debdcc5668949ab5b2a3228e6d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PipeSpeed: 6
+  pipeSpeed: 0
+  minPipeSpeed: 8
+  maxPipeSpeed: 13
 --- !u!65 &2233718694338363485
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -501,7 +503,7 @@ GameObject:
   - component: {fileID: 823510287734563119}
   m_Layer: 0
   m_Name: ScoreZone
-  m_TagString: Untagged
+  m_TagString: Score
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

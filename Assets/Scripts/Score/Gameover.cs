@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Gameover : MonoBehaviour
 {
+
+    private GameManager _gm;
+    private GameObject _gmObject;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _gmObject = GameObject.Find("GameManager");
+        _gm = _gmObject.GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -21,7 +26,7 @@ public class Gameover : MonoBehaviour
         if (other.CompareTag("Pipe"))
         {
             Destroy(gameObject);
-            Time.timeScale = 0;
+            _gm.Pause();
         }
     }
 }

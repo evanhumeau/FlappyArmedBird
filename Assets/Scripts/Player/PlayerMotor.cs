@@ -52,7 +52,7 @@ public class PlayerMotor : MonoBehaviour
 
     private void OnJumpStop()
     {
-
+        isJumping = false;
     }
 
 }
