@@ -5,6 +5,15 @@ using UnityEngine;
 public class Gameover : MonoBehaviour
 {
 
+    [SerializeField]
+    private GameObject replay;
+    [SerializeField]
+    private GameObject play;
+    [SerializeField]
+    private GameObject gover;
+    [SerializeField]
+    private GameObject goverSound;
+
     private GameManager _gm;
     private GameObject _gmObject;
 
@@ -25,8 +34,24 @@ public class Gameover : MonoBehaviour
     {
         if (other.CompareTag("Pipe"))
         {
+            Instantiate(goverSound);
             Destroy(gameObject);
             _gm.Pause();
+            play.SetActive(false);
+            replay.SetActive(true);
+            gover.SetActive(true);
+            
+
+        } else if (other.CompareTag("Wall"))
+            {
+            Instantiate(goverSound);
+            Destroy(gameObject);
+                _gm.Pause();
+            play.SetActive(false);
+            replay.SetActive(true);
+            gover.SetActive(true);
+            
+
         }
     }
 }

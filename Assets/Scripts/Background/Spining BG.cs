@@ -8,12 +8,12 @@ public class SpiningBG : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 4f;
+        speed = 24f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0f, speed * Time.deltaTime, 0f, Space.Self); 
+        transform.Rotate(speed * Time.deltaTime, 0f , 0f, Space.Self); 
     }
 }

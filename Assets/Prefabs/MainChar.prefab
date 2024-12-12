@@ -193,6 +193,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6bc543cd891e4246baed34e11d6b32c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  replay: {fileID: 0}
+  play: {fileID: 0}
+  gover: {fileID: 0}
+  goverSound: {fileID: 261714814087719408, guid: 04dc0f0db64ae2144b9822ee4225a36d,
+    type: 3}
 --- !u!114 &6156606255774546843
 MonoBehaviour:
   m_ObjectHideFlags: 0
