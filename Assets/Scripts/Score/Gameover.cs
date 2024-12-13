@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Gameover : MonoBehaviour
 {
-
     [SerializeField]
-    private GameObject replay;
-    [SerializeField]
-    private GameObject play;
-    [SerializeField]
-    private GameObject gover;
+    private GameObject goverUI;
     [SerializeField]
     private GameObject goverSound;
+
+    [SerializeField]
+    private Transform explosionTransform;
+
 
     private GameManager _gm;
     private GameObject _gmObject;
@@ -27,30 +26,29 @@ public class Gameover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Pipe"))
         {
-            Instantiate(goverSound);
+            goverSound.SetActive(true);
+            explosionTransform.parent = null;
             Destroy(gameObject);
             _gm.Pause();
-            play.SetActive(false);
-            replay.SetActive(true);
-            gover.SetActive(true);
+            goverUI.SetActive(true);
             
 
         } else if (other.CompareTag("Wall"))
             {
-            Instantiate(goverSound);
+            goverSound.SetActive(true);
+            explosionTransform.parent = null;
             Destroy(gameObject);
                 _gm.Pause();
-            play.SetActive(false);
-            replay.SetActive(true);
-            gover.SetActive(true);
-            
+            goverUI.SetActive(true);
+
+
 
         }
     }
