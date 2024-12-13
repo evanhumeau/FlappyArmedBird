@@ -1,0 +1,33 @@
+FLAPPY U.F.O 
+
+	README - Choix de design et différences avec le jeu original -
+
+TEAM AKWAKWAK  
+
+	- Game Designer : Abdesslam LMOUIDINI
+	- UI/UX Designer : Ethan REVERTEGAT
+	- 3D Artiste : Hugo AVIRON-VIOLET
+	- Développeur : Evan HUMEAU
+	- Producer : Lory RAVILY
+
+
+
+THEME SPATIAL  
+
+	Nous avons décidé de passer sur un thème spatial, remplaçant l'oiseau par un OVNI, les tuyaux par des bobines électriques et mettant un fond spatial.
+	De plus, ajout d'astéroïdes et de tirs de blaster.
+
+	Volonté de rendre chaque partie plus interactive en ajoutant des obstacles entre certains tuyaux, qu'il faut détruire avec des projectiles lancés par le joueur.
+
+NOUVELLES MECANIQUES
+
+
+-	Ajout d'obstacles : périodiquement, et de manière aléatoire les "tuyaux" seront bloqués par un astéroïde. Le joueur devra alors viser puistirer dessus avec son blaster, 
+			    ce qui lui permettra de passer.
+			    Pour une meilleure courbe de difficulté, les astéroïde ont 1/4 chance d'apparaître au début de la partie, puis 1/3 chance à partir de 16 au score,
+			    Puis 1/2 chance à partir de 30 points.
+
+
+-	Mécanique de tir : Pour détruire les astéroïdes, le joueur devra viser avec sa souris en direction de l'obstacle puis tirer au blaster avec un clic gauche. Cela ajoute 
+		     	   Un nouveau degré d'adresse au jeu original, ce qui challenge encore plus le joueur mais récompense mieux sa concentration et ses réflexes.
+
